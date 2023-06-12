@@ -37,6 +37,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
         
         //PintarELLogo
         this.pintarImagen(this.logo,"src/recursos/Logo-flor-de-loto.png");
+        Home h1 = new Home();
+        h1.setSize(540,690);
+        h1.setLocation(0,0);
+        contenido.removeAll();
+        contenido.add(h1,BorderLayout.CENTER);
+        contenido.revalidate();
+        contenido.repaint();
        
         
         
@@ -133,7 +140,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ApoyoEmocional a1 = new ApoyoEmocional();
+                ApoyoEmocional a1 = new ApoyoEmocional();
         a1.setSize(540,690);
         a1.setLocation(0,0);
         contenido.removeAll();
@@ -144,7 +151,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Home h1 = new Home();
+        h1.setSize(540,690);
+        h1.setLocation(0,0);
+        contenido.removeAll();
+        contenido.add(h1,BorderLayout.CENTER);
+        contenido.revalidate();
+        contenido.repaint();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

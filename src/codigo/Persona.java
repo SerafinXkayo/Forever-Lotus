@@ -11,7 +11,7 @@ package codigo;
 public class Persona {
 
     String usuario;
-    TestB test=new TestB();
+    TestA test=new TestA();
     Persona persona;
 
     public Persona(String usuario) {
@@ -27,11 +27,11 @@ public class Persona {
         this.usuario = usuario;
     }
 
-    public TestB getTest() {
+    public TestA getTest() {
         return test;
     }
 
-    public void setTest(TestB test) {
+    public void setTest(TestA test) {
         this.test = test;
     }
 

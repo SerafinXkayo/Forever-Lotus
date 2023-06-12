@@ -22,6 +22,8 @@ public class Estres extends javax.swing.JPanel {
 
     public Estres() {
         initComponents();
+        repaint();
+
     }
 
     /**
@@ -38,14 +40,16 @@ public class Estres extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        botonTest = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelEstres.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Esta es la ventana de estres");
+        jLabel2.setText("Estres");
 
         jButton2.setBackground(new java.awt.Color(255, 204, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -74,14 +78,20 @@ public class Estres extends javax.swing.JPanel {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(255, 204, 255));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton5.setText("Realizar Test");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        botonTest.setBackground(new java.awt.Color(255, 204, 255));
+        botonTest.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        botonTest.setText("Realizar Test");
+        botonTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                botonTestActionPerformed(evt);
             }
         });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("El estrés es la reacción del cuerpo ante situaciones dañinas, ya sean \nreales o percibidas. Cuando se siente amenazado, se produce una \nreacción química  en el cuerpo que le permite actuar de una manera\nque evita lesiones. \nEsta reacción se conoce como la respuesta al estrés.\nDurante la respuesta al estrés, aumenta su frecuencia cardíaca, la \nrespiración se acelera, los músculos se tensan y la presión arterial\naumenta.");
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout panelEstresLayout = new javax.swing.GroupLayout(panelEstres);
         panelEstres.setLayout(panelEstresLayout);
@@ -96,11 +106,12 @@ public class Estres extends javax.swing.JPanel {
                         .addGap(4, 4, 4)
                         .addComponent(jButton1))
                     .addGroup(panelEstresLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
+                        .addGap(29, 29, 29)
                         .addGroup(panelEstresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(241, 241, 241))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonTest)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(237, 237, 237))
         );
         panelEstresLayout.setVerticalGroup(
             panelEstresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,11 +120,13 @@ public class Estres extends javax.swing.JPanel {
                     .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton1))
-                .addGap(95, 95, 95)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(48, 48, 48)
-                .addComponent(jButton5)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
+                .addComponent(botonTest)
+                .addGap(33, 33, 33))
         );
 
         add(panelEstres, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 540));
@@ -136,10 +149,11 @@ public class Estres extends javax.swing.JPanel {
         d1.setSize(690, 540);
         d1.setLocation(0, 0);
 
+        panelEstres.repaint();
         panelEstres.removeAll();
         panelEstres.add(d1, BorderLayout.CENTER);
         panelEstres.revalidate();
-        panelEstres.repaint();
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -147,27 +161,34 @@ public class Estres extends javax.swing.JPanel {
         a1.setSize(690, 540);
         a1.setLocation(0, 0);
 
+         panelEstres.repaint();
         panelEstres.removeAll();
         panelEstres.add(a1, BorderLayout.CENTER);
-        panelEstres.revalidate();
-        panelEstres.repaint();
+        panelEstres.revalidate();  
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        TestB test = new TestB();
+    private void botonTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTestActionPerformed
+        TestA test = new TestA();
         JOptionPane.showMessageDialog(null, "Realiza el test cuidadosamente: " + getNombre());
         test.setCuenta(getNombre());
         test.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+        panelEstres.repaint();
+        panelEstres.removeAll();
+        panelEstres.add(panelEstres, BorderLayout.CENTER);
+        panelEstres.revalidate();
+        
+    }//GEN-LAST:event_botonTestActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonTest;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel panelEstres;
     // End of variables declaration//GEN-END:variables
 }

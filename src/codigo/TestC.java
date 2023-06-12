@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Luis David
  */
-public class TestB extends javax.swing.JFrame {
+public class TestC extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
@@ -33,7 +33,7 @@ public class TestB extends javax.swing.JFrame {
     public String cuenta;
     public JLabel Dato = new JLabel("");
     
-    public TestB() {
+    public TestC() {
         initComponents();
         crearGrupo();
         this.setLocationRelativeTo(null);

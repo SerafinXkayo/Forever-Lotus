@@ -33,13 +33,15 @@ public class ApoyoEmocional extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelApoyos.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Esta es la ventana principal de apoyos");
+        jLabel2.setText("Bienvenido a apoyos");
 
         jButton2.setBackground(new java.awt.Color(255, 204, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -68,22 +70,33 @@ public class ApoyoEmocional extends javax.swing.JPanel {
             }
         });
 
+        jTextArea1.setBackground(new java.awt.Color(204, 255, 255));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("                                               Bienvenido a la seccion de  los apoyos.\n       Puedes explorar las tres secciones que tenemos preparadas para tí, \n                       sientete libre de interactuar y conocer la aplicacion.\n    Esta aplicacion no es una herramienta de diagnostico, los trastornos de salud \n mental  solo pueden ser diagnosticados por profesionales de salud autorizados.");
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout panelApoyosLayout = new javax.swing.GroupLayout(panelApoyos);
         panelApoyos.setLayout(panelApoyosLayout);
         panelApoyosLayout.setHorizontalGroup(
             panelApoyosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelApoyosLayout.createSequentialGroup()
+                .addGap(0, 143, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(288, 288, 288))
             .addGroup(panelApoyosLayout.createSequentialGroup()
                 .addGroup(panelApoyosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelApoyosLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelApoyosLayout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addGap(3, 3, 3)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(181, 181, 181))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelApoyosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelApoyosLayout.setVerticalGroup(
             panelApoyosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,8 +105,11 @@ public class ApoyoEmocional extends javax.swing.JPanel {
                     .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton1))
-                .addGap(95, 95, 95)
-                .addComponent(jLabel2))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         add(panelApoyos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 540));
@@ -139,6 +155,8 @@ public class ApoyoEmocional extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel panelApoyos;
     // End of variables declaration//GEN-END:variables
 }
